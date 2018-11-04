@@ -1,11 +1,5 @@
 import _ from 'lodash';
+import ReactDOM from 'react-dom';
+import Main from './components/Main';
 
-function component() {
-  let element = document.createElement('div');
-
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-
-  return element;
-}
-
-document.body.appendChild(component());
+ReactDOM.render(Main(), document.body);
