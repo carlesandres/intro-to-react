@@ -7,6 +7,8 @@ class Header extends React.Component {
     this.state = {
       likes: 0
     };
+
+    this.incrementLikes = this.incrementLikes.bind(this);
   }
 
   componentDidMount() {
@@ -14,15 +16,22 @@ class Header extends React.Component {
     setInterval( () => {
       const newState = this.state.likes + 1;
       this.setState({ likes: newState });
-    }, 1000);
+    }, 5000);
+  }
+
+  incrementLikes(event) {
+    this.setState({ likes: this.state.likes + 1 });
   }
 
   render() {
-    return ([
-      <h1>{this.props.title || 'Finantial Times'}</h1>,
-      <h2>{this.props.subtitle || ''}</h2>,
-      <div>Likes: {this.state.likes}</div>
-    ]);
+    return (
+      <div className="header">
+        <h1>{this.props.title || 'Finantial Times'}</h1>
+        <h2>{this.props.subtitle || ''}</h2>
+        <div>Likes: {this.state.likes}</div>
+        <button onClick={this.incrementLikes}>Like</button>
+      </div>
+    );
   }
 }
 
