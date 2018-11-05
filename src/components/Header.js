@@ -1,9 +1,10 @@
 import React from 'react';
 
-const Header = () => {
-  return (
-    <h1>My Beautiful React app</h1>
-  );
+const Header = (props) => {
+  return ([
+    <h1>{props.title || 'Finantial Times'}</h1>,
+    <h2>{props.subtitle || ''}</h2>
+  ]);
 };
 
 export default Header;
