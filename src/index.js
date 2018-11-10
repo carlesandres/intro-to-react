@@ -1,5 +1,6 @@
 import _ from 'lodash';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import Main from './components/Main';
 
-ReactDOM.render(Main(), document.body);
+ReactDOM.render(<Main />, document.body);
