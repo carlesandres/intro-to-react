@@ -4,7 +4,7 @@ import Article from './Article';
 
 const Main = () => {
   return (
-    <div>
+    <div className="main">
       <Header
         title="THE DAILY PAPER"
         subtitle="News, gossip and whatnot"
