@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './Header';
+import Article from './Article';
 
 const Main = () => {
   return (
@@ -8,7 +9,8 @@ const Main = () => {
         title="THE DAILY PAPER"
         subtitle="News, gossip and whatnot"
       />
-      <div>Hello React World!</div>
+      <Article text="Paul is dead." />
+      <Article text="Strawberry fields forever." />
     </div>
   );
 };
