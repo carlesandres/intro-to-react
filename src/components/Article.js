@@ -1,10 +1,6 @@
 import React from 'react';
 
 class Article extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   static getDerivedStateFromProps(props, state) {
     console.log('This is called before every call to "render"');
     console.log('props', props);
