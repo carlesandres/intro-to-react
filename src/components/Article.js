@@ -3,16 +3,18 @@ import React from 'react';
 class Article extends React.Component {
   constructor(props) {
     super(props);
-
-    console.log('This is invoked whenever a new article is instantiated');
   }
 
-  componentWillMount() {
-    console.log('This is invoked just before an instance is going to be rendered for the first time');
+  static getDerivedStateFromProps(props, state) {
+    console.log('This is called before every call to "render"');
+    console.log('props', props);
+    console.log('state', state);
+    return null;
   }
 
-  componentDidMount() {
-    console.log('This is invoked after the component has been rendered for the first time');
+  componentDidUpdate(prevProps, prevState) {
+    console.log('This is called every time the component is updated');
+    console.log('prevProps', prevProps);
   }
 
   render() {
